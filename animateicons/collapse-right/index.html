@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <p>При наведении на стрелку начинается анимация.</p>
+
+  <div class="test">
+    <svg id="collapse" width="50%" height="150px" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g transform-origin="center">
+        <path d="M13 8L6.5 15" stroke="#3A3E41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 8L6.5 1.5" stroke="#3A3E41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 8L1.5 15" stroke="#3A3E41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 8L1.5 1.5" stroke="#3A3E41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <animateTransform
+          begin="collapse.mouseenter"
+          attributeName="transform"
+          type="scale"
+          from="1 1"
+          to="1.2 1"
+          dur=".2s"
+        />
+
+        <animateTransform
+          begin="collapse.mouseenter + .2s"
+          attributeName="transform"
+          type="scale"
+          from="1.2 1"
+          to="0.5 1"
+          dur=".2s"
+          fill="freeze"
+        />
+
+        <animateTransform
+          begin="collapse.mouseenter + .6s"
+          attributeName="transform"
+          type="scale"
+          from="0.5 1"
+          to="1 1"
+          dur=".3s"
+          fill="freeze"
+        />
+      </g>
+    </svg>
+  </div>
+
+</body>
+
+</html>
