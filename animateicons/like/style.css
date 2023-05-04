@@ -1,0 +1,13 @@
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 300px;
+  height: 300px;
+}
+
+#red,
+#white {
+  cursor: pointer;
+}

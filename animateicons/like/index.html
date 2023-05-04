@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <p>При клике на сердце начинается анимация. При повторном клике иконка возвращается в исходный вид.</p>
+
+  <div class="test">
+    <svg id="like" width="55%" height="150px" viewBox="0 -1 22 24">
+      <g id="red" transform-origin="center">
+        <path
+          d="M19.42 2.57996C18.9183 2.07653 18.3222 1.67709 17.6658 1.40455C17.0095 1.132 16.3057 0.991699 15.595 0.991699C14.8843 0.991699 14.1806 1.132 13.5242 1.40455C12.8678 1.67709 12.2717 2.07653 11.77 2.57996L11 3.35996L10.23 2.57996C9.72835 2.07653 9.13223 1.67709 8.47585 1.40455C7.81947 1.132 7.11574 0.991699 6.40503 0.991699C5.69431 0.991699 4.99058 1.132 4.3342 1.40455C3.67783 1.67709 3.0817 2.07653 2.58003 2.57996C0.460025 4.69996 0.330025 8.27996 3.00003 11L11 19L19 11C21.67 8.27996 21.54 4.69996 19.42 2.57996Z"
+          stroke="#303030"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          transform-origin="center"
+          fill="transparent"
+        >
+          <animate
+            begin="red.click + .6s"
+            attributeName="fill"
+            values="#C74952"
+            fill="freeze"
+          />
+  
+          <animate
+            begin="red.click + .6s"
+            attributeName="stroke"
+            values="#C74952"
+            fill="freeze"
+          />
+
+          <animate
+            begin="white.click"
+            attributeName="fill"
+            values="transparent"
+            fill="freeze"
+          />
+  
+          <animate
+            begin="white.click"
+            attributeName="stroke"
+            values="#303030"
+            fill="freeze"
+          />
+        </path>
+
+        <animateTransform
+          begin="red.click"
+          attributeName="transform"
+          type="rotate"
+          from="0 0 -2"
+          to="-30"
+          dur=".2s"
+        />
+
+        <animateTransform
+          begin="red.click + .2s"
+          attributeName="transform"
+          type="rotate"
+          from="-30 0 -2"
+          to="360"
+          dur=".3s"
+        />
+
+        <animateTransform
+          begin="red.click + .5s"
+          attributeName="transform"
+          type="scale"
+          values="1; 0.5; 1"
+          keyTimes="0; 0.5; 1"
+          dur=".3s"
+        />
+
+        <animateTransform
+          begin="red.click + .8s"
+          attributeName="transform"
+          type="scale"
+          values="0"
+          fill="freeze"
+        />
+
+        <animateTransform
+          begin="white.click"
+          attributeName="transform"
+          type="scale"
+          values="1"
+          fill="freeze"
+        />
+      </g>
+
+      <g id="white" transform-origin="center">
+        <path
+          d="M19.42 2.57996C18.9183 2.07653 18.3222 1.67709 17.6658 1.40455C17.0095 1.132 16.3057 0.991699 15.595 0.991699C14.8843 0.991699 14.1806 1.132 13.5242 1.40455C12.8678 1.67709 12.2717 2.07653 11.77 2.57996L11 3.35996L10.23 2.57996C9.72835 2.07653 9.13223 1.67709 8.47585 1.40455C7.81947 1.132 7.11574 0.991699 6.40503 0.991699C5.69431 0.991699 4.99058 1.132 4.3342 1.40455C3.67783 1.67709 3.0817 2.07653 2.58003 2.57996C0.460025 4.69996 0.330025 8.27996 3.00003 11L11 19L19 11C21.67 8.27996 21.54 4.69996 19.42 2.57996Z"
+          stroke="#C74952"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          transform-origin="center"
+          fill="#C74952"
+        >
+          <animate
+            begin="red.click + .8s"
+            attributeName="fill"
+            values="#C74952"
+            fill="freeze"
+          />
+
+          <animate
+            begin="red.click + .8s"
+            attributeName="stroke"
+            values="#C74952"
+            fill="freeze"
+          />
+        </path>
+
+        <animateTransform
+          attributeName="transform"
+          type="scale"
+          values="0"
+          fill="freeze"
+        />
+
+        <animateTransform
+          begin="red.click + .8s"
+          attributeName="transform"
+          type="scale"
+          values="1"
+          fill="freeze"
+        />
+
+        <animateTransform
+          begin="white.click"
+          attributeName="transform"
+          type="scale"
+          values="0"
+          fill="freeze"
+        />
+      </g>
+    </svg>
+  </div>
+
+</body>
+
+</html>
