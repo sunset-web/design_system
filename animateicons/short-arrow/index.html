@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <p>При наведении на стрелку начинается анимация.</p>
+
+  <div class="test">
+    <svg id="arrow" width="50%" height="160px" viewBox="0 -1 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g transform-origin="center">
+        <path d="M8 8L1.5 15" stroke="#3A3E41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M8 8L1.5 1.5" stroke="#3A3E41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+        <animateTransform
+          begin="arrow.mouseenter"
+          attributeName="transform"
+          type="scale"
+          values="1; 0; 0; 1.1; 1"
+          keyTimes="0; 0.3; 0.6; 0.9; 1"
+          dur=".8s"
+        />
+      </g>
+    </svg>
+  </div>
+
+</body>
+
+</html>
