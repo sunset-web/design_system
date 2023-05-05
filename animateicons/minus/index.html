@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <p>При нажатии на плюс начинается анимация.</p>
+
+    <div class="test">
+      <svg
+        id="minus"
+        width="50%"
+        height="150px"
+        viewBox="0 0 16 2"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 1H15"
+          stroke="#303030"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <animateTransform
+          begin="minus.click"
+          attributeName="transform"
+          type="scale"
+          values="1 1; 1.1 1; 0.8 1; 1 1"
+          keyTimes="0; 0.3; 0.6; 1"
+          dur=".6s"
+        />
+      </svg>
+    </div>
+  </body>
+</html>

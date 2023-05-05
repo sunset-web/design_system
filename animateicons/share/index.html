@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <p>При нажатии на иконку "Поделиться" начинается анимация.</p> 
+      
+    <div class="test">
+      <svg
+        id="share"
+        width="50%"
+        height="150px"
+        viewBox="0 -2 18 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 11.3672L15 17M15 3L5 8.63277"
+          stroke="#303030"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          transform-origin="center left"
+        />
+
+        <g fill="white">
+          <path
+            d="M3 12.25C4.24264 12.25 5.25 11.2426 5.25 10C5.25 8.75736 4.24264 7.75 3 7.75C1.75736 7.75 0.75 8.75736 0.75 10C0.75 11.2426 1.75736 12.25 3 12.25Z"
+            stroke="#303030"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M15 5.5C16.2426 5.5 17.25 4.49264 17.25 3.25C17.25 2.00736 16.2426 1 15 1C13.7574 1 12.75 2.00736 12.75 3.25C12.75 4.49264 13.7574 5.5 15 5.5Z"
+            stroke="#303030"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <animateTransform
+              begin="share.click"
+              attributeName="transform"
+              type="translate"
+              values="0 0; -2 1; 1 -1; 0 0"
+              dur=".6s"
+            />
+          </path>
+
+          <path
+            d="M15 19C16.2426 19 17.25 17.9926 17.25 16.75C17.25 15.5074 16.2426 14.5 15 14.5C13.7574 14.5 12.75 15.5074 12.75 16.75C12.75 17.9926 13.7574 19 15 19Z"
+            stroke="#303030"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <animateTransform
+              begin="share.click"
+              attributeName="transform"
+              type="translate"
+              values="0 0; -2 -1; 1 1; 0 0"
+              dur=".6s"
+            />
+          </path>
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
