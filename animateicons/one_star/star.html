@@ -1,0 +1,191 @@
+<style>
+    svg {
+        overflow:visible;
+    }
+</style>
+
+<svg id="starSvg" width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <g id="starSvgOpen">
+        <path d="M12.4642 3C12.8238 3 13.1489 3.21399 13.2912 3.54429L15.5143 8.70666L21.111 9.22574C21.4691 9.25895 21.7731 9.50205 21.8842 9.84408C21.9954 10.1861 21.8923 10.5615 21.6221 10.7988L17.3994 14.5084L18.6352 19.9916C18.7143 20.3424 18.577 20.7066 18.2861 20.918C17.9951 21.1294 17.6063 21.1474 17.2971 20.9638L12.4642 18.0941L7.63125 20.9638C7.32202 21.1474 6.9332 21.1294 6.64225 20.918C6.35131 20.7066 6.21404 20.3424 6.29311 19.9916L7.52891 14.5084L3.3062 10.7988C3.03602 10.5615 2.93298 10.1861 3.04411 9.84408C3.15524 9.50205 3.45923 9.25895 3.81732 9.22574L9.41401 8.70666L11.6372 3.54429C11.7794 3.21399 12.1045 3 12.4642 3Z" stroke="#303030" fill="#ffffff" transform-origin="50% 50%" >
+            <animateTransform
+            begin="starSvgClose.click"
+            href="#starSvgClose"
+            attributeName="transform"
+            type="scale"
+            values="0"
+            fill="freeze"
+            />
+            <animateTransform
+            begin="starSvgClose.click"
+            href="#starSvgOpen"
+            attributeName="transform"
+            type="scale"
+            values="1"
+            fill="freeze"
+            />
+            <animateTransform
+                id="starSvgAnim"
+                begin="starSvgClose.click"
+                attributeName="transform"
+                type="scale"
+                values="1; 0.8; 1"
+                fill="freeze"
+                dur="0.5s"
+            />
+            <animate
+                begin="starSvgAnim.begin + 0.4s"
+                attributeName="fill"
+                values="#ffffff; #000000"
+                fill="freeze"
+                dur="0.2s"
+            />
+        </path>
+
+        <path d="M21.6465 4.64648L23 4
+                 M4 4.64648L3 4
+                 M4 22L3 23
+                 M22 22L23 23
+                 M13 22L13 23
+                 M19 2L17.9999 2.88094
+                 M7 2L7.67975 2.88094
+                 M3 8L2 7.99996
+                 M3 19L2 19
+                 M23 19L21.9999 18.9999
+                 M23 8L21.9999 7.99992" stroke="black" stroke-linecap="round" opacity="0" transform-origin="50% 50%">
+            <animate
+                 begin="starSvgAnim.begin + 0.25s"
+                 attributeName="opacity"
+                 values="0; 1"
+                 fill="freeze"
+                 dur="0.2s"
+             />
+            <animate
+                 begin="starSvgAnim.begin + 0.5s"
+                 attributeName="d"
+                 values="
+                 M21.6465 4.64648L23 4
+                 M4 4.64648L3 4
+                 M4 22L3 23
+                 M22 22L23 23
+                 M13 22L13 23
+                 M19 2L17.9999 2.88094
+                 M7 2L7.67975 2.88094
+                 M3 8L2 7.99996
+                 M3 19L2 19
+                 M23 19L21.9999 18.9999
+                 M23 8L21.9999 7.99992;
+
+                 M21.6465 4.64648L23.6465 2.64648
+                 M4 4.64648L2 2.64648
+                 M4 22L2 24
+                 M22 22L24 24
+                 M13 22L13 24
+                 M18.6797 1L17.9999 2.88094
+                 M7 1L7.67975 2.88094
+                 M3 8L0.999942 7.99992
+                 M3 19L0.999942 18.9999
+                 M24 19L21.9999 18.9999
+                 M24 8L21.9999 7.99992;
+
+                 M23.6465 4.64648L25.6465 2.64648
+                 M4 4.64648L2 2.64648
+                 M4 24L2 26
+                 M24 24L26 26
+                 M14 24L14 26
+                 M19.6797 1L18.9999 2.88094
+                 M8 1L8.67975 2.88094
+                 M3 9L0.999942 8.99992
+                 M3 20L0.999942 19.9999
+                 M26 20L23.9999 19.9999
+                 M26 9L23.9999 8.99992;
+
+                 M25.6465 4.64648L27.6465 2.64648
+                 M4 4.64648L2 2.64648
+                 M4 26L2 28
+                 M26 26L28 28
+                 M15 26L15 28
+                 M21.6797 1L20.9999 2.88094
+                 M9 1L9.67975 2.88094
+                 M3 10L0.999942 9.99992
+                 M3 21L0.999942 20.9999
+                 M28 21L25.9999 20.9999
+                 M28 10L25.9999 9.99992;
+                 
+                 M27 3L27.6465 2.64648
+                 M3 4L2 2.64648
+                 M3 27L2 28
+                 M27 27L28 28
+                 M15 27L15 28
+                 M21.6797 1L21 2
+                 M9 1V2
+                 M2 10L0.999942 9.99992
+                 M2 21L0.999942 20.9999
+                 M28 21L27 21 
+                 M28 10L27 9.99996 "
+                 fill="freeze"
+                 dur="0.3s"
+             />
+             <animateTransform
+                begin="starSvgAnim.begin + 0.5s"
+                attributeName="transform"
+                type="translate"
+                values="0 0; 0 0; -1 -1; -2 -2; -2 -2"
+                fill="freeze"
+                dur="0.3s"
+            />
+            <animate
+                 begin="starSvgAnim.begin + 0.8s"
+                 attributeName="opacity"
+                 values="1; 0"
+                 fill="freeze"
+                 dur="0.1s"
+            />
+            <animate
+                begin="starSvgAnim.begin + 0.9s"
+                attributeName="d"
+                to="M21.6465 4.64648L23 4 M4 4.64648L3 4 M4 22L3 23 M22 22L23 23 M13 22L13 23 M19 2L17.9999 2.88094 M7 2L7.67975 2.88094 M3 8L2 7.99996 M3 19L2 19 M23  19L21.9999 18.9999 M23 8L21.9999 7.99992;"
+                fill="freeze"
+                dur="0.1s"
+            />
+            <animateTransform
+                begin="starSvgAnim.begin + 0.9s"
+                attributeName="transform"
+                type="translate"
+                values="0 0;"
+                fill="freeze"
+                dur="0.1s"
+            />
+        </path>
+    </g>
+
+    <g id="starSvgClose">
+        <path d="M12.4642 3C12.8238 3 13.1489 3.21399 13.2912 3.54429L15.5143 8.70666L21.111 9.22574C21.4691 9.25895 21.7731 9.50205 21.8842 9.84408C21.9954 10.1861 21.8923 10.5615 21.6221 10.7988L17.3994 14.5084L18.6352 19.9916C18.7143 20.3424 18.577 20.7066 18.2861 20.918C17.9951 21.1294 17.6063 21.1474 17.2971 20.9638L12.4642 18.0941L7.63125 20.9638C7.32202 21.1474 6.9332 21.1294 6.64225 20.918C6.35131 20.7066 6.21404 20.3424 6.29311 19.9916L7.52891 14.5084L3.3062 10.7988C3.03602 10.5615 2.93298 10.1861 3.04411 9.84408C3.15524 9.50205 3.45923 9.25895 3.81732 9.22574L9.41401 8.70666L11.6372 3.54429C11.7794 3.21399 12.1045 3 12.4642 3Z" stroke="#303030" fill="#ffffff" transform-origin="50% 50%">
+        <animate
+            begin="starSvgOpen.click"
+            attributeName="fill"
+            values="#000000; #ffffff"
+            fill="freeze"
+            dur="0.2s"
+        />
+        <animateTransform
+            begin="starSvgOpen.click"
+            href="#starSvgClose"
+            attributeName="transform"
+            type="scale"
+            values="1"
+            fill="freeze"
+        />
+        <animateTransform
+            begin="starSvgOpen.click"
+            href="#starSvgOpen"
+            attributeName="transform"
+            type="scale"
+            values="0"
+            fill="freeze"
+            dur="0.2s"
+        />
+        </path>
+    </g>
+
+</svg> 
