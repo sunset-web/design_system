@@ -1,0 +1,543 @@
+<style>
+    svg {
+        overflow:visible;
+    }
+</style>
+
+<svg id="starArrSvg" width="350" height="50%" viewBox="0 0 136 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <g>
+       <path id="starOne" d="M11.9999 2C12.3993 2 12.7603 2.23765 12.9183 2.60447L15.3873 8.33763L21.6028 8.9141C22.0005 8.95099 22.3381 9.22097 22.4615 9.60081C22.5849 9.98066 22.4705 10.3975 22.1704 10.6611L17.4808 14.7809L18.8532 20.8703C18.9411 21.2599 18.7886 21.6644 18.4655 21.8992C18.1424 22.1339 17.7106 22.1539 17.3672 21.95L11.9999 18.763L6.63257 21.95C6.28916 22.1539 5.85734 22.1339 5.53423 21.8992C5.21111 21.6644 5.05867 21.2599 5.14648 20.8703L6.51892 14.7809L1.82931 10.6611C1.52926 10.3975 1.41482 9.98066 1.53824 9.60081C1.66166 9.22097 1.99926 8.95099 2.39695 8.9141L8.61245 8.33763L11.0814 2.60447C11.2394 2.23765 11.6005 2 11.9999 2Z" fill="#FEFEFE" stroke="#303030">
+           <animate 
+               begin="starOne.mouseenter"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+       <!--Выключить чёрный-->
+           <animate 
+               begin="starOne.mouseleave"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+       </path>
+
+       <path id="starOneBlack" d="M11.9999 2C12.3993 2 12.7603 2.23765 12.9183 2.60447L15.3873 8.33763L21.6028 8.9141C22.0005 8.95099 22.3381 9.22097 22.4615 9.60081C22.5849 9.98066 22.4705 10.3975 22.1704 10.6611L17.4808 14.7809L18.8532 20.8703C18.9411 21.2599 18.7886 21.6644 18.4655 21.8992C18.1424 22.1339 17.7106 22.1539 17.3672 21.95L11.9999 18.763L6.63257 21.95C6.28916 22.1539 5.85734 22.1339 5.53423 21.8992C5.21111 21.6644 5.05867 21.2599 5.14648 20.8703L6.51892 14.7809L1.82931 10.6611C1.52926 10.3975 1.41482 9.98066 1.53824 9.60081C1.66166 9.22097 1.99926 8.95099 2.39695 8.9141L8.61245 8.33763L11.0814 2.60447C11.2394 2.23765 11.6005 2 11.9999 2Z" fill="#000000" stroke="#303030">
+           <animateTransform
+           attributeName="transform"
+           type="scale"
+           values="0"
+           fill="freeze"
+           />
+           <!--Менять по клику на белую-->
+           <animateTransform
+               begin="starOneBlack.click"
+               attributeName="transform"
+               type="scale"
+               values="0"
+               fill="freeze"
+           />
+           <!--Менять по клику на чёрную-->
+           <animateTransform
+               begin="starOne.click"
+               attributeName="transform"
+               type="scale"
+               values="1"
+               fill="freeze"
+           />
+       </path>
+    </g>
+       
+    <g>
+       <path id="starTwo" d="M39.9999 2C40.3993 2 40.7603 2.23765 40.9183 2.60447L43.3873 8.33763L49.6028 8.9141C50.0005 8.95099 50.3381 9.22097 50.4615 9.60081C50.5849 9.98066 50.4705 10.3975 50.1704 10.6611L45.4808 14.7809L46.8532 20.8703C46.9411 21.2599 46.7886 21.6644 46.4655 21.8992C46.1424 22.1339 45.7106 22.1539 45.3672 21.95L39.9999 18.763L34.6326 21.95C34.2892 22.1539 33.8573 22.1339 33.5342 21.8992C33.2111 21.6644 33.0587 21.2599 33.1465 20.8703L34.5189 14.7809L29.8293 10.6611C29.5293 10.3975 29.4148 9.98066 29.5382 9.60081C29.6617 9.22097 29.9993 8.95099 30.3969 8.9141L36.6125 8.33763L39.0814 2.60447C39.2394 2.23765 39.6005 2 39.9999 2Z" fill="#FEFEFE" stroke="#303030">
+           <animate 
+               id="starTwoHover"
+               begin="starTwo.mouseenter"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starTwoHover.begin"
+               href="#starOne"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+       <!--Выключить чёрный-->
+           <animate 
+               id="starTwoClose"
+               begin="starTwo.mouseleave"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starTwoClose.begin"
+               href="#starOne"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+       </path>
+       <path id="starTwoBlack" d="M39.9999 2C40.3993 2 40.7603 2.23765 40.9183 2.60447L43.3873 8.33763L49.6028 8.9141C50.0005 8.95099 50.3381 9.22097 50.4615 9.60081C50.5849 9.98066 50.4705 10.3975 50.1704 10.6611L45.4808 14.7809L46.8532 20.8703C46.9411 21.2599 46.7886 21.6644 46.4655 21.8992C46.1424 22.1339 45.7106 22.1539 45.3672 21.95L39.9999 18.763L34.6326 21.95C34.2892 22.1539 33.8573 22.1339 33.5342 21.8992C33.2111 21.6644 33.0587 21.2599 33.1465 20.8703L34.5189 14.7809L29.8293 10.6611C29.5293 10.3975 29.4148 9.98066 29.5382 9.60081C29.6617 9.22097 29.9993 8.95099 30.3969 8.9141L36.6125 8.33763L39.0814 2.60447C39.2394 2.23765 39.6005 2 39.9999 2Z" fill="#000000" stroke="#303030">
+        <animateTransform
+           attributeName="transform"
+           type="scale"
+           values="0"
+           fill="freeze"
+           />
+           <!--Менять по клику на белую-->
+           <animateTransform
+               begin="starTwoBlack.click"
+               attributeName="transform"
+               type="scale"
+               values="0"
+               fill="freeze"
+           />
+           <!--Менять по клику на чёрную-->
+           <animateTransform
+               begin="starTwo.click"
+               attributeName="transform"
+               type="scale"
+               values="1"
+               fill="freeze"
+           />
+       </path>
+    </g>
+       
+   <g>
+       <path id="starThree" d="M67.9999 2C68.3993 2 68.7603 2.23765 68.9183 2.60447L71.3873 8.33763L77.6028 8.9141C78.0005 8.95099 78.3381 9.22097 78.4615 9.60081C78.5849 9.98066 78.4705 10.3975 78.1704 10.6611L73.4808 14.7809L74.8532 20.8703C74.9411 21.2599 74.7886 21.6644 74.4655 21.8992C74.1424 22.1339 73.7106 22.1539 73.3672 21.95L67.9999 18.763L62.6326 21.95C62.2892 22.1539 61.8573 22.1339 61.5342 21.8992C61.2111 21.6644 61.0587 21.2599 61.1465 20.8703L62.5189 14.7809L57.8293 10.6611C57.5293 10.3975 57.4148 9.98066 57.5382 9.60081C57.6617 9.22097 57.9993 8.95099 58.3969 8.9141L64.6125 8.33763L67.0814 2.60447C67.2394 2.23765 67.6005 2 67.9999 2Z" fill="#FEFEFE" stroke="#303030">
+           <animate 
+               id="starThreeHover"
+               begin="starThree.mouseenter"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starThreeHover.begin"
+               href="#starOne"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starThreeHover.begin"
+               href="#starTwo"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+       <!--Выключить чёрный-->
+           <animate 
+               id="starThreeClose"
+               begin="starThree.mouseleave"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starThreeClose.begin"
+               href="#starOne"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starThreeClose.begin"
+               href="#starTwo"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+       </path>
+       <path id="starThreeBlack" d="M67.9999 2C68.3993 2 68.7603 2.23765 68.9183 2.60447L71.3873 8.33763L77.6028 8.9141C78.0005 8.95099 78.3381 9.22097 78.4615 9.60081C78.5849 9.98066 78.4705 10.3975 78.1704 10.6611L73.4808 14.7809L74.8532 20.8703C74.9411 21.2599 74.7886 21.6644 74.4655 21.8992C74.1424 22.1339 73.7106 22.1539 73.3672 21.95L67.9999 18.763L62.6326 21.95C62.2892 22.1539 61.8573 22.1339 61.5342 21.8992C61.2111 21.6644 61.0587 21.2599 61.1465 20.8703L62.5189 14.7809L57.8293 10.6611C57.5293 10.3975 57.4148 9.98066 57.5382 9.60081C57.6617 9.22097 57.9993 8.95099 58.3969 8.9141L64.6125 8.33763L67.0814 2.60447C67.2394 2.23765 67.6005 2 67.9999 2Z" fill="#000000" stroke="#303030">
+           <animateTransform
+           attributeName="transform"
+           type="scale"
+           values="0"
+           fill="freeze"
+           />
+           <!--Менять по клику на белую-->
+           <animateTransform
+               begin="starThreeBlack.click"
+               attributeName="transform"
+               type="scale"
+               values="0"
+               fill="freeze"
+           />
+           <!--Менять по клику на чёрную-->
+           <animateTransform
+               begin="starThree.click"
+               attributeName="transform"
+               type="scale"
+               values="1"
+               fill="freeze"
+           />
+       </path>
+   </g>
+       
+   <g>
+       <path id="starFour" d="M95.9999 2C96.3993 2 96.7603 2.23765 96.9183 2.60447L99.3873 8.33763L105.603 8.9141C106 8.95099 106.338 9.22097 106.461 9.60081C106.585 9.98066 106.47 10.3975 106.17 10.6611L101.481 14.7809L102.853 20.8703C102.941 21.2599 102.789 21.6644 102.465 21.8992C102.142 22.1339 101.711 22.1539 101.367 21.95L95.9999 18.763L90.6326 21.95C90.2892 22.1539 89.8573 22.1339 89.5342 21.8992C89.2111 21.6644 89.0587 21.2599 89.1465 20.8703L90.5189 14.7809L85.8293 10.6611C85.5293 10.3975 85.4148 9.98066 85.5382 9.60081C85.6617 9.22097 85.9993 8.95099 86.3969 8.9141L92.6125 8.33763L95.0814 2.60447C95.2394 2.23765 95.6005 2 95.9999 2Z" fill="#FEFEFE" stroke="#303030">
+           <animate 
+               id="starFourHover"
+               begin="starFour.mouseenter"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFourHover.begin"
+               href="#starOne"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFourHover.begin"
+               href="#starTwo"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFourHover.begin"
+               href="#starThree"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+       <!--Выключить чёрный-->
+           <animate 
+               id="starFourClose"
+               begin="starFour.mouseleave"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFourClose.begin"
+               href="#starOne"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFourClose.begin"
+               href="#starTwo"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFourClose.begin"
+               href="#starThree"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+       </path>
+       <path id="starFourBlack" d="M95.9999 2C96.3993 2 96.7603 2.23765 96.9183 2.60447L99.3873 8.33763L105.603 8.9141C106 8.95099 106.338 9.22097 106.461 9.60081C106.585 9.98066 106.47 10.3975 106.17 10.6611L101.481 14.7809L102.853 20.8703C102.941 21.2599 102.789 21.6644 102.465 21.8992C102.142 22.1339 101.711 22.1539 101.367 21.95L95.9999 18.763L90.6326 21.95C90.2892 22.1539 89.8573 22.1339 89.5342 21.8992C89.2111 21.6644 89.0587 21.2599 89.1465 20.8703L90.5189 14.7809L85.8293 10.6611C85.5293 10.3975 85.4148 9.98066 85.5382 9.60081C85.6617 9.22097 85.9993 8.95099 86.3969 8.9141L92.6125 8.33763L95.0814 2.60447C95.2394 2.23765 95.6005 2 95.9999 2Z" fill="#000000" stroke="#303030">
+           <animateTransform
+           attributeName="transform"
+           type="scale"
+           values="0"
+           fill="freeze"
+           />
+           <!--Менять по клику на белую-->
+           <animateTransform
+               begin="starFourBlack.click"
+               attributeName="transform"
+               type="scale"
+               values="0"
+               fill="freeze"
+           />
+           <!--Менять по клику на чёрную-->
+           <animateTransform
+               begin="starFour.click"
+               attributeName="transform"
+               type="scale"
+               values="1"
+               fill="freeze"
+           />
+       </path>
+   </g>
+       
+   <g>
+       <path id="starFive" d="M124 2C124.399 2 124.76 2.23765 124.918 2.60447L127.387 8.33763L133.603 8.9141C134 8.95099 134.338 9.22097 134.461 9.60081C134.585 9.98066 134.47 10.3975 134.17 10.6611L129.481 14.7809L130.853 20.8703C130.941 21.2599 130.789 21.6644 130.465 21.8992C130.142 22.1339 129.711 22.1539 129.367 21.95L124 18.763L118.633 21.95C118.289 22.1539 117.857 22.1339 117.534 21.8992C117.211 21.6644 117.059 21.2599 117.146 20.8703L118.519 14.7809L113.829 10.6611C113.529 10.3975 113.415 9.98066 113.538 9.60081C113.662 9.22097 113.999 8.95099 114.397 8.9141L120.612 8.33763L123.081 2.60447C123.239 2.23765 123.6 2 124 2Z" fill="#FEFEFE" stroke="#303030" transform-origin="50% 50%">
+           <animate 
+               id="starFiveHover"
+               begin="starFive.mouseenter"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFiveHover.begin"
+               href="#starOne"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFiveHover.begin"
+               href="#starTwo"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFiveHover.begin"
+               href="#starThree"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFiveHover.begin"
+               href="#starFour"
+               attributeName="fill"
+               to="#000000"
+               fill="freeze"
+               dur="0.2s"
+           />
+       <!--Выключить чёрный-->
+           <animate 
+               id="starFiveClose"
+               begin="starFive.mouseleave"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFiveClose.begin"
+               href="#starOne"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFiveClose.begin"
+               href="#starTwo"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFiveClose.begin"
+               href="#starThree"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+           <animate 
+               begin="starFiveClose.begin"
+               href="#starFour"
+               attributeName="fill"
+               to="#FEFEFE"
+               fill="freeze"
+               dur="0.2s"
+           />
+       </path>
+   </g>
+   <!-- starFiveBlack -->
+   <g>
+       <path id="starFiveBlack" d="M124 2C124.399 2 124.76 2.23765 124.918 2.60447L127.387 8.33763L133.603 8.9141C134 8.95099 134.338 9.22097 134.461 9.60081C134.585 9.98066 134.47 10.3975 134.17 10.6611L129.481 14.7809L130.853 20.8703C130.941 21.2599 130.789 21.6644 130.465 21.8992C130.142 22.1339 129.711 22.1539 129.367 21.95L124 18.763L118.633 21.95C118.289 22.1539 117.857 22.1339 117.534 21.8992C117.211 21.6644 117.059 21.2599 117.146 20.8703L118.519 14.7809L113.829 10.6611C113.529 10.3975 113.415 9.98066 113.538 9.60081C113.662 9.22097 113.999 8.95099 114.397 8.9141L120.612 8.33763L123.081 2.60447C123.239 2.23765 123.6 2 124 2Z" stroke="#303030" fill="#000000" transform-origin="90% 50%" >
+           <animateTransform
+           attributeName="transform"
+           type="scale"
+           values="0"
+           fill="freeze"
+           />
+           <animateTransform
+           begin="starFiveBlack.click"
+           attributeName="transform"
+           type="scale"
+           values="0"
+           fill="freeze"
+           />
+           <animateTransform
+           begin="starFiveBlack.click"
+           attributeName="transform"                            
+           href="#starFive"
+           type="scale"
+           values="1"
+           fill="freeze"
+           />
+           <animateTransform
+               id="starSvgFiveAnim"
+               begin="starFive.click"
+               attributeName="transform"
+               type="scale"
+               values="1; 0.8; 1"
+               fill="freeze"
+               dur="0.5s"
+           />
+           <animateTransform
+           begin="starFive.click"
+           attributeName="transform"
+           href="#starFive"
+           type="scale"
+           values="0"
+           fill="freeze"
+       />
+       </path>
+   </g>
+   <g>
+       
+       <path d="M21.6465 4.64648L23 4
+                M4 4.64648L3 4
+                M4 22L3 23
+                M22 22L23 23
+                M13 22L13 23
+                M19 2L17.9999 2.88094
+                M7 2L7.67975 2.88094
+                M3 8L2 7.99996
+                M3 19L2 19
+                M23 19L21.9999 18.9999
+                M23 8L21.9999 7.99992" stroke="black" stroke-linecap="round" opacity="0" transform-origin="50% 50%">
+           <animate
+                begin="starSvgFiveAnim.begin + 0.25s"
+                attributeName="opacity"
+                values="0; 1"
+                fill="freeze"
+                dur="0.2s"
+            />
+           <animate
+                begin="starSvgFiveAnim.begin + 0.5s"
+                attributeName="d"
+                values="
+                M21.6465 4.64648L23 4
+                M4 4.64648L3 4
+                M4 22L3 23
+                M22 22L23 23
+                M13 22L13 23
+                M19 2L17.9999 2.88094
+                M7 2L7.67975 2.88094
+                M3 8L2 7.99996
+                M3 19L2 19
+                M23 19L21.9999 18.9999
+                M23 8L21.9999 7.99992;
+
+                M21.6465 4.64648L23.6465 2.64648
+                M4 4.64648L2 2.64648
+                M4 22L2 24
+                M22 22L24 24
+                M13 22L13 24
+                M18.6797 1L17.9999 2.88094
+                M7 1L7.67975 2.88094
+                M3 8L0.999942 7.99992
+                M3 19L0.999942 18.9999
+                M24 19L21.9999 18.9999
+                M24 8L21.9999 7.99992;
+
+                M23.6465 4.64648L25.6465 2.64648
+                M4 4.64648L2 2.64648
+                M4 24L2 26
+                M24 24L26 26
+                M14 24L14 26
+                M19.6797 1L18.9999 2.88094
+                M8 1L8.67975 2.88094
+                M3 9L0.999942 8.99992
+                M3 20L0.999942 19.9999
+                M26 20L23.9999 19.9999
+                M26 9L23.9999 8.99992;
+
+                M25.6465 4.64648L27.6465 2.64648
+                M4 4.64648L2 2.64648
+                M4 26L2 28
+                M26 26L28 28
+                M15 26L15 28
+                M21.6797 1L20.9999 2.88094
+                M9 1L9.67975 2.88094
+                M3 10L0.999942 9.99992
+                M3 21L0.999942 20.9999
+                M28 21L25.9999 20.9999
+                M28 10L25.9999 9.99992;
+                
+                M27 3L27.6465 2.64648
+                M3 4L2 2.64648
+                M3 27L2 28
+                M27 27L28 28
+                M15 27L15 28
+                M21.6797 1L21 2
+                M9 1V2
+                M2 10L0.999942 9.99992
+                M2 21L0.999942 20.9999
+                M28 21L27 21 
+                M28 10L27 9.99996 "
+                fill="freeze"
+                dur="0.3s"
+            />
+            <animateTransform
+               begin="starSvgFiveAnim.begin + 0.5s"
+               attributeName="transform"
+               type="translate"
+               values="0 0; 0 0; -1 -1; -2 -2; -2 -2"
+               fill="freeze"
+               dur="0.3s"
+           />
+           <animate
+                begin="starSvgFiveAnim.begin + 0.8s"
+                attributeName="opacity"
+                values="1; 0"
+                fill="freeze"
+                dur="0.1s"
+           />
+           <animate
+               begin="starSvgFiveAnim.begin + 0.9s"
+               attributeName="d"
+               to="M21.6465 4.64648L23 4 M4 4.64648L3 4 M4 22L3 23 M22 22L23 23 M13 22L13 23 M19 2L17.9999 2.88094 M7 2L7.67975 2.88094 M3 8L2 7.99996 M3 19L2 19 M23  19L21.9999 18.9999 M23 8L21.9999 7.99992;"
+               fill="freeze"
+               dur="0.1s"
+           />
+           <animateTransform
+               begin="starSvgFiveAnim.begin + 0.9s"
+               attributeName="transform"
+               type="translate"
+               values="0 0;"
+               fill="freeze"
+               dur="0.1s"
+           />
+       </path>
+       
+       <animateTransform
+       begin="starFive.click"
+       attributeName="transform"
+       type="translate"
+       values="112 0;"
+       fill="freeze"
+       />
+   </g>
+
+   </svg>

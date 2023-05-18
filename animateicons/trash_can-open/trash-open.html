@@ -1,0 +1,109 @@
+<svg id="trashSvgOpen" width="58" height="58" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <!--Для работы trashSvgOpen требуется задать overflow= hidden-->
+    <style>
+        #trashSvgOpen {
+            overflow: hidden;
+        }
+    </style>
+
+     <!--Крышка-->
+    <path d="M1 5H19 M6 5V3C6 2 7 1 8 1H12C13 1 14 2 14 3V5" stroke="#303030" stroke-linecap="round" stroke-linejoin="round" transform-origin="100% 50%">
+        <animateTransform
+            id="trashSvgOpenCap"
+            begin="trashSvgOpen.click"
+            attributeName="transform"
+            type="rotate"
+            values="0; 90"
+            fill="freeze"
+            dur="0.4s"
+        />
+    </path>
+        
+    <!--Первый камень-->
+    <path d="M0 -2.04098L1.14849 -4.52049L1.72273 -5.14037L3.13666 -6.28509C3.60508 -6.66432 4.32298 -6.55732 4.76343 -6.14595C5.51148 -5.44729 6.77205 -4.56327 8.61367 -3.90061C9.76215 -3.28074 8.03942 -2.04098 7.46518 -1.42111C7.00578 -0.925205 7.27376 0.0252728 7.46518 0.438524C7.08235 1.0584 6.20184 2.42213 5.74244 2.91803C5.1682 3.53791 2.29698 0.438524 1.72273 0.438524C1.26334 0.438524 0.38283 -1.21448 0 -2.04098Z" fill="#303030" transform="translate(3, -5)">
+        <animateTransform
+            begin="trashSvgOpenCap.begin + 0.2s"
+            attributeName="transform"
+            type="translate"
+            values="3, -5; 3, 12 ;3, 9"
+            fill="freeze"
+            dur="0.35s"
+        />
+        <animateTransform
+            begin="trashSvgOpenCap.begin + 0.6s"
+            attributeName="transform"
+            type="translate"
+            values="3, 9; 3, 11; 3, 9"
+            fill="freeze"
+            dur="0.25s"
+        />
+    </path>               
+    
+    <!--Второй камень-->
+    <path d="M4.60544 -2.7975L5.54086 -1.64589L5.70622 -1.21795L6.06535 0.345966C5.67169 0.38483 4.59907 0.739515 3.45785 1.84734C2.88156 2.25965 2.6878 1.12368 2.52243 0.69574C2.39014 0.353385 1.86263 0.257374 1.61541 0.252163C1.40438 -0.0824188 0.94926 -0.837171 0.816966 -1.17953C0.651599 -1.60747 2.84818 -2.2686 2.98515 -2.54868C3.09473 -2.77275 4.111 -2.80792 4.60544 -2.7975Z" fill="#303030" transform="translate(10, -5)">
+        <animateTransform
+            begin="trashSvgOpenCap.begin + 0.4s"
+            attributeName="transform"
+            type="translate"
+            values="10, -5; 10, 7"
+            fill="freeze"
+            dur="0.25s"
+        />
+        <animateTransform
+            begin="trashSvgOpenCap.begin + 0.6s"
+            attributeName="transform"
+            type="translate"
+            values="10, 7; 10, 9; 10, 6 "
+            fill="freeze"
+            dur="0.25s"
+        />
+    </path>
+        
+
+    <g>
+         <!--Бак-->
+        <path d="M17 5V19C17 20 16 21 15 21H5C4 21 3 20 3 19V5" fill="#FEFEFE" stroke="#303030" stroke-linecap="round" stroke-linejoin="round">
+            <animate
+                begin="trashSvgOpenCap.begin + 0.3s"
+                attributeName="d"
+                values=" M17 5V19C17 20 16 21 15 21H5C4 21 3 20 3 19V5;
+                         M17 7V19C17 20 16 21 15 21H5C4 21 3 20 3 19V7;
+                         M17 5V19C17 20 16 21 15 21H5C4 21 3 20 3 19V5"
+                fill="freeze"
+                dur="0.2s"
+            />
+            <animate
+                begin="trashSvgOpenCap.begin + 0.6s"
+                attributeName="d"
+                values=" M17 5V19C17 20 16 21 15 21H5C4 21 3 20 3 19V5;
+                         M17 7V19C17 20 16 21 15 21H5C4 21 3 20 3 19V7;
+                         M17 5V19C17 20 16 21 15 21H5C4 21 3 20 3 19V5"
+                fill="freeze"
+                dur="0.2s"
+            />
+        </path>
+         <!--Полосы в баке-->
+        <path d="M8 10V16 M12 10V16 M3 5H17" stroke="#303030" stroke-linecap="round" stroke-linejoin="round">                                
+            <animate
+                begin="trashSvgOpenCap.begin + 0.3s"
+                attributeName="d"
+                values="M8 10V16 M12 10V16 M3 5H17;
+                        M8 12V16 M12 12V16 M3 7H17; 
+                        M8 10V16 M12 10V16 M3 5H17"
+                fill="freeze"
+                dur="0.2s"
+            />
+            <animate
+                begin="trashSvgOpenCap.begin + 0.6s"
+                attributeName="d"
+                values="M8 10V16 M12 10V16 M3 5H17;
+                        M8 12V16 M12 12V16 M3 7H17; 
+                        M8 10V16 M12 10V16 M3 5H17"
+                fill="freeze"
+                dur="0.2s"
+            />
+        </path>
+    </g>
+
+</svg>
