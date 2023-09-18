@@ -14,3 +14,14 @@ function getInbetweenStrings($start, $end, $str)
    preg_match_all($regex, $str, $matches);
    return $matches[1];
 }
+// преобразование картинок
+function getResizePhoto($photo, $width, $height)
+{
+   $file = CFile::ResizeImageGet(
+      $photo,
+      array("width" => $width, "height" => $height),
+      BX_RESIZE_IMAGE_PROPORTIONAL,
+      true
+   );
+   return $file['src'];
+}
