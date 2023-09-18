@@ -1,2 +1,3 @@
 # design_system
-Design system and components upfly
+
+Design system and components
