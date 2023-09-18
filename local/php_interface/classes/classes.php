@@ -9,6 +9,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/Sett
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/UpflyPropertiesList.php');
 // Создания лида в Б24 через отправку формы
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/CreateLeadB24.php');
+// Подмену логина на почту и телефон/ генерация автоматического логина
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/LoginPhoneMail.php');
+// Доп свойство наследуемое для элемента
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/CIBlockNewPropertySEO.php');
+// Доп свойство наследуемое для раздела
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/CIBlockNewPropertySectionSEO.php');
 
 //Load classes
 \Bitrix\Main\Loader::registerAutoLoadClasses(
