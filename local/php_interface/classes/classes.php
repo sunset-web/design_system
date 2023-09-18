@@ -14,9 +14,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/Crea
 \Bitrix\Main\Loader::registerAutoLoadClasses(
    null,
    array(
-      "ImportHh"  => "/bitrix/php_interface/classes/integrations/ImportHh.php",
-      "Dadata"  => "/bitrix/php_interface/classes/integrations/Dadata.php",
-      "ImportCrm"  => "/bitrix/php_interface/classes/integrations/ImportCrm.php",
-      "CRest"  => "/bitrix/php_interface/classes/integrations/crest/crest.php",
+      "ImportHh"  => "/bitrix/php_interface/classes/integrations/ImportHh.php", // интеграция с hh.ru
+      "Dadata"  => "/bitrix/php_interface/classes/integrations/Dadata.php", // интеграция с dadata
+      "ImportCrm"  => "/bitrix/php_interface/classes/integrations/ImportCrm.php", // интеграция с b24
+      "CRest"  => "/bitrix/php_interface/classes/integrations/crest/crest.php", // библиотека crest
    )
 );
