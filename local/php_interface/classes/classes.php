@@ -3,10 +3,6 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/LoadPage.php');
 // метод модифицирует поисковый индекс для элементов и разделов инфоблока
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/SearchCatalog.php');
-// Доп свойство для компонента main.feedback
-require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/SettingsPropertiyForm.php');
-// Доп свойство привязка к элементам с описанием
-require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/UpflyPropertiesList.php');
 // Создания лида в Б24 через отправку формы
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/CreateLeadB24.php');
 // Подмену логина на почту и телефон/ генерация автоматического логина
@@ -15,6 +11,16 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/Logi
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/CIBlockNewPropertySEO.php');
 // Доп свойство наследуемое для раздела
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/CIBlockNewPropertySectionSEO.php');
+// Доп свойство для компонента main.feedback
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/SettingsPropertiyForm.php');
+// Доп свойство привязка к элементам с описанием
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/UpflyPropertiesList.php');
+// Доп свойство привязка к цене
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/UpflyPriceFilter.php');
+// Доп свойство перекрестные продажи
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/UpflyCrossSell.php');
+// Доп свойство условие фильтрации для перекрестных продаж
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/UpflyConditionMoreLess.php');
 
 //Load classes
 \Bitrix\Main\Loader::registerAutoLoadClasses(
