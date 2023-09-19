@@ -31,7 +31,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/lib/CIBlo
    null,
    array(
       "ImportFns"  => "/local/php_interface/classes/integrations/ImportFns.php", // интеграция с ФНС
-      "ItinApi"  => "/local/php_interface/classes/integrations/ItinApi.php", // собственный Апи
+      "ItinApi"  => "/local/php_interface/classes/integrations/CustomApi.php", // собственный Апи
       "ImportHh"  => "/local/php_interface/classes/integrations/ImportHh.php", // интеграция с hh.ru
       "Dadata"  => "/local/php_interface/classes/integrations/Dadata.php", // интеграция с dadata
       "ImportCrm"  => "/local/php_interface/classes/integrations/ImportCrm.php", // интеграция с b24

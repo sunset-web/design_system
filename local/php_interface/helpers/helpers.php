@@ -7,3 +7,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/debug
 require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/settings.php');
 // Прочие хелперы
 require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/others.php');
+// Хелперы для CustomApi
+require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/customapi.php');
+// Хелперы на автоматическое обновление в публичной части
+require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/pull.php');
