@@ -108,3 +108,12 @@ function isBot(&$botname = '')
    }
    return false;
 }
+/**
+ * Возвращает json формат массива
+ * @param $array - массив для преобразования
+ * @return string 
+ */
+function json_response($array)
+{
+   return \Bitrix\Main\Web\Json::encode($array);
+}
