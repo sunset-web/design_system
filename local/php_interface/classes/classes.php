@@ -21,6 +21,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/Upfl
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/UpflyCrossSell.php');
 // Доп свойство условие фильтрации для перекрестных продаж
 require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/UpflyConditionMoreLess.php');
+// Доп свойство склад для элементов
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/CIBlockNewPropertyStock.php');
+// Доп свойство склад для разделов
+require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/CIBlockNewPropertyStockSection.php');
 
 //Load classes
 \Bitrix\Main\Loader::registerAutoLoadClasses(
@@ -30,5 +34,9 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/php_interface/classes/lib/Upfl
       "Dadata"  => "/bitrix/php_interface/classes/integrations/Dadata.php", // интеграция с dadata
       "ImportCrm"  => "/bitrix/php_interface/classes/integrations/ImportCrm.php", // интеграция с b24
       "CRest"  => "/bitrix/php_interface/classes/integrations/crest/crest.php", // библиотека crest
+
+      "CalculateGeolocation"  => "/bitrix/php_interface/classes/lib/CalculateGeolocation.php", // рассчет расстояния между точками через координаты
+      "ExportController"  => "/bitrix/php_interface/classes/lib/export-import.upfly/ExportController.php", // экспорт елементов в exel
+      "ImportController"  => "/bitrix/php_interface/classes/lib/export-import.upfly/ImportController.php", // импорт элементов из exel
    )
 );
