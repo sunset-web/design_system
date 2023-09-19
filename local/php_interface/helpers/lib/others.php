@@ -117,3 +117,14 @@ function json_response($array)
 {
    return \Bitrix\Main\Web\Json::encode($array);
 }
+/**
+ * Возвращает класс хайлоад блока для дальнейших взаимодействий
+ * @param $id - id хайлоад блока
+ * @return string 
+ */
+function getHLClassFromId($id)
+{
+   $hlblock = \Bitrix\Highloadblock\HighloadBlockTable::getById($id)->fetch();
+   $entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
+   return $entity->getDataClass();
+}
