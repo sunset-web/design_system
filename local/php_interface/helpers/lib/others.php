@@ -1,15 +1,19 @@
 <?
 
 /**
- * Возвращает отформатированное значени телефона
+ * Возвращает отформатированное значение телефона
  * @param $tel - телефон для форматирования
  * @return string 
  */
 function formatPhone($tel)
 {
-   $kphone = preg_replace('/(.*), (.*)/', '$1', $tel);
-   $kphone = str_replace([' ', '(', ')', '-'], '', $kphone);
-   return $kphone;
+   if (preg_match('~[0-9]+~', $tel)) {
+      $kphone = preg_replace('/(.*), (.*)/', '$1', $tel);
+      $kphone = str_replace([' ', '(', ')', '-'], '', $kphone);
+      return $kphone;
+   }
+
+   return false;
 }
 /**
  * Возвращает значение между строк
@@ -22,8 +26,12 @@ function getInbetweenStrings($start, $end, $str)
 {
    $matches = array();
    $regex = "/$start([a-zA-Z0-9_]*)$end/";
-   preg_match_all($regex, $str, $matches);
-   return $matches[1];
+   if ($str) {
+      preg_match($regex, $str, $matches);
+      return $matches[1];
+   }
+
+   return false;
 }
 /**
  * Возвращает ссылку на преобразованную картинку
@@ -40,7 +48,10 @@ function getResizePhoto($photo, $width, $height)
       BX_RESIZE_IMAGE_PROPORTIONAL,
       true
    );
-   return $file['src'];
+   if ($file) {
+      return $file['src'];
+   }
+   return false;
 }
 /**
  * Возвращает строковое значение месяца
@@ -50,20 +61,23 @@ function getResizePhoto($photo, $width, $height)
 function formatMonth($num)
 {
    $arr = array(
-      "01" => "января",
-      "02" => "февраля",
-      "03" => "марта",
-      "04" => "апреля",
-      "05" => "мая",
-      "06" => "июня",
-      "07" => "июля",
-      "08" => "августа",
-      "09" => "сентября",
+      "1" => "января",
+      "2" => "февраля",
+      "3" => "марта",
+      "4" => "апреля",
+      "5" => "мая",
+      "6" => "июня",
+      "7" => "июля",
+      "8" => "августа",
+      "9" => "сентября",
       "10" => "октября",
       "11" => "ноября",
       "12" => "декабря"
    );
-   return $arr[$num];
+   if ($num >= 1 && $num <= 12) {
+      return $arr[$num];
+   }
+   return false;
 }
 /**
  * Объект БитриксД7 _REQUEST
