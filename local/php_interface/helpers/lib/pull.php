@@ -2,7 +2,6 @@
 // Подписка на модуль при добавлении новости/уведомления
 function notificAdd(\Bitrix\Main\Entity\Event $event)
 {
-
    if (!CModule::IncludeModule('pull'))
       return false;
 
@@ -37,10 +36,9 @@ function notificAdd(\Bitrix\Main\Entity\Event $event)
    ));
 }
 
-// Подписка на модуль при добавлении новости/уведомления
+// Подписка на модуль при обновлении новости/уведомления
 function notificUpdate(\Bitrix\Main\Entity\Event $event)
 {
-
    if (!CModule::IncludeModule('pull'))
       return false;
 
