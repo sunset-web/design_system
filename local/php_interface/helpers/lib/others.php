@@ -16,7 +16,7 @@ function formatPhone($tel)
    return false;
 }
 /**
- * Возвращает значение между строк
+ * Возвращает значение между строк (массивом)
  * @param $start - начало поиска
  * @param $end - конец поиска
  * @param $str - строка для поиска
@@ -27,7 +27,7 @@ function getInbetweenStrings($start, $end, $str)
    $matches = array();
    $regex = "/$start([a-zA-Z0-9_]*)$end/";
    if ($str) {
-      preg_match($regex, $str, $matches);
+      preg_match_all($regex, $str, $matches);
       return $matches[1];
    }
 
@@ -60,6 +60,7 @@ function getResizePhoto($photo, $width, $height)
  */
 function formatMonth($num)
 {
+   $num = +$num;
    $arr = array(
       "1" => "января",
       "2" => "февраля",
