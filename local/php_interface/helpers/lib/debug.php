@@ -29,7 +29,7 @@ function debug_print_r($context)
  */
 function debug_get_var_dump($context)
 {
-   if ($_GET['debug'] = 'y') {
+   if ($_GET['debug'] == 'y') {
       echo '<pre>';
       var_dump($context);
       echo '</pre>';
@@ -42,7 +42,7 @@ function debug_get_var_dump($context)
  */
 function debug_get_print_r($context)
 {
-   if ($_GET['debug'] = 'y') {
+   if ($_GET['debug'] == 'y') {
       echo '<pre>';
       print_r($context);
       echo '</pre>';
