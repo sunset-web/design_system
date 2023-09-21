@@ -143,3 +143,38 @@ function getHLClassFromId($id)
    $entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
    return $entity->getDataClass();
 }
+ /**
+     * Возвращает правильное окончание слова в зависимости от числа, которому оно сопоставлено
+     *
+     * @param int $count
+     * @param string $form1
+     * @param string $form2_4
+     * @param string $form5_0
+     *
+     * @return string
+     */
+    public static function wordEnding($count, $form1 = "", $form2_4 = "а", $form5_0 = "ов")
+    {
+        $n100 = $count % 100;
+        $n10 = $count % 10;
+
+        if (($n100 > 10) && ($n100 < 21)) {
+            return $form5_0;
+        } else if ((!$n10) || ($n10 >= 5)) {
+            return $form5_0;
+        } else if ($n10 == 1) {
+            return $form1;
+        }
+
+        return $form2_4;
+    }
+    /**
+     * @param $email
+     * @return false|int
+     *
+     * Проверка E-mail
+     */
+    function checkEmail($email)
+    {
+        return preg_match('|^[_a-z0-9:()-]+(\.[_a-z0-9:()-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*$|i', $email);
+    }

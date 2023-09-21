@@ -40,11 +40,16 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/CIB
       "ItinApi"  => "/local/php_interface/classes/integrations/CustomApi.php", // собственный Апи
       "ImportHh"  => "/local/php_interface/classes/integrations/ImportHh.php", // интеграция с hh.ru
       "Dadata"  => "/local/php_interface/classes/integrations/Dadata.php", // интеграция с dadata
+      "CurrencyCbr"  => "/local/php_interface/classes/integrations/CurrencyCbr.php", // интеграция с центральным банком России
       "ImportCrm"  => "/local/php_interface/classes/integrations/ImportCrm.php", // интеграция с b24
-      "CRest"  => "/local/php_interface/classes/integrations/crest/crest.php", // библиотека crest
+      "Sms"  => "/local/php_interface/classes/integrations/Sms.php", // интеграция с смс-сервисом
+      "CRest"  => "/local/php_interface/classes/lib/crest/crest.php", // библиотека crest
 
       "CalculateGeolocation"  => "/local/php_interface/classes/lib/CalculateGeolocation.php", // рассчет расстояния между точками через координаты
       "ExportController"  => "/local/php_interface/classes/lib/export-import.upfly/ExportController.php", // экспорт елементов в exel
       "ImportController"  => "/local/php_interface/classes/lib/export-import.upfly/ImportController.php", // импорт элементов из exel
+      "YoutubeVideo"  => "/local/php_interface/classes/lib/YoutubeVideo.php", // работа ссылкой youtube
+      "GoogleDriveVideo"  => "/local/php_interface/classes/lib/GoogleDriveVideo.php", // работа ссылкой googledrive
+      "FavoritesManager"  => "/local/php_interface/classes/lib/FavoritesManager.php", // класс добавления в избранное
    )
 );
