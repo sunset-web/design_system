@@ -25,6 +25,12 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/Upf
 require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/CIBlockNewPropertyStock.php');
 // Доп свойство склад для разделов
 require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/CIBlockNewPropertyStockSection.php');
+// Доп свойство привязка к медиабиблиотеке для разделов
+require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/PropMediaLibUserType.php');
+// Доп свойство привязка к медиабиблиотеке для элементов
+require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/PropMediaLibIblockProperty.php');
+// Доп свойство привязка к компаниям из CRM
+require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/CIBlockPropertyCRM.php');
 
 //Load classes
 \Bitrix\Main\Loader::registerAutoLoadClasses(
