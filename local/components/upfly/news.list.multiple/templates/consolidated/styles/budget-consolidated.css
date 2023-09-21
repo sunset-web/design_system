@@ -1,0 +1,86 @@
+/* ТАБЛИЦА */
+
+.budget-consolidated {
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.top-panel__selector-group {
+  width: 100%;
+  gap: 16px;
+}
+
+.budget-consolidated h1 {
+  margin-bottom: 8px;
+}
+
+.budget-consolidated__description {
+  margin-bottom: 24px;
+}
+.__filters_content {
+  width: 674px;
+}
+.__filters_content_filter {
+  width: 300px;
+}
+.btn__download {
+  min-width: 368px;
+}
+
+
+
+.datepickers-group {
+  gap: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.form-input-field-group input {
+  border-color: var(--light-gray);
+  height: 48px;
+}
+
+@media (max-width: 1919px) {
+  .budget-consolidated {
+    padding-bottom: 40px;
+  }
+
+}
+
+@media (max-width: 1199px) {
+  .budget-consolidated {
+    padding-top: 112px;
+  }
+  .top-panel {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .filters-modal {
+    width: 690px;
+  }
+  .filters-modal-content>.__filters_content_filter {
+    width: 332px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .top-panel__selector-group {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0;
+    row-gap: 16px;
+  }
+
+  .filters-modal {
+    width: 100%;
+  }
+  .filters-modal-content>.__filters_content_filter {
+    width: 100%;
+  }
+  .form-datepicker-group:not(.datepicker-without-info) .ui-datepicker-trigger {
+    right: 14px;
+  }
+  .btn__download {
+    min-width: 100%;
+  }
+}

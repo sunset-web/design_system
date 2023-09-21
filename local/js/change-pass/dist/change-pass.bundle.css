@@ -1,0 +1,94 @@
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+	-webkit-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+	opacity: 0;
+}
+
+.security {
+    background: -o-radial-gradient(100% 160%, 800px, #F0FAFF 60%, #FFF);
+    background: radial-gradient(800px at 100% 160%, #F0FAFF 60%, #FFF);
+    min-height: calc(100vh - 121px);
+  }
+  
+  .security-title {
+    margin-bottom: 8px;
+  }
+  
+  .security-subtitle {
+    margin-bottom: 40px;
+  }
+  
+  .security-form {
+    max-width: 488px;
+  }
+  
+  .security-inputs-group {
+    margin-bottom: 40px;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .security-btn {
+    margin-top: 40px;
+    width: 200px;
+    height: 48px;
+  }
+  .security__note {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #8895BB;
+  }
+  
+  @media (max-width: 1199px) {
+    .security {
+      /* display: flex;
+      align-items: center; */
+      min-height: 100vh;
+      padding-top: 128px;
+      text-align: center;
+      background: -o-radial-gradient(center right, 500px, #F0FAFF 60%, #FFF);
+      background: radial-gradient(500px at center right, #F0FAFF 60%, #FFF);
+    }
+  
+    .container-small {
+      padding: 0 36px;
+      max-width: 527px;
+    }
+  
+     .security-btn {
+      margin: 0 auto;
+      margin-top: 32px;
+    }
+    .security-btn {
+      width: 216px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .container-small {
+      padding: 0 16px;
+      max-width: none;
+    }
+    .security {
+      background: none;
+    }
+    .security-inputs-group {
+      margin-bottom: 24px;
+      gap: 20px;
+    }
+    .security-btn {
+      width: 100%;
+    }
+  
+    .security-form {
+      max-width: none;
+    }
+  }
