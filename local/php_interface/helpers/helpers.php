@@ -11,3 +11,5 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/other
 require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/customapi.php');
 // Хелперы на автоматическое обновление в публичной части
 require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/pull.php');
+// Хелпер XMLtoArray
+require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/helpers/lib/XMLtoArray.php');
