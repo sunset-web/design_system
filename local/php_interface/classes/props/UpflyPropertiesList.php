@@ -1,5 +1,5 @@
 <?
-
+AddEventHandler("iblock", "OnIBlockPropertyBuildList", array("UpflyPropertiesList", "GetUserTypeDescription"));
 /*
  * Пояснения:
  * (*)  - Мы принимаем массив array('VALUE' => , 'DESCRIPTION' => ) и должны его же вернуть. Если поле с описанием - оно будет содержаться в соответствующем ключе.

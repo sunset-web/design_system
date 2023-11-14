@@ -1,5 +1,5 @@
 <?
-
+AddEventHandler("main", "OnUserTypeBuildList", array("CIBlockNewPropertySectionSEO", "GetUserTypeDescription"));
 // Класс реализует кастомный тип свойства инфоблока SEO свойство
 
 class CIBlockNewPropertySectionSEO extends CUserTypeString

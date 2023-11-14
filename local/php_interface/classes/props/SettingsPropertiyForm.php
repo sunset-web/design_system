@@ -1,6 +1,8 @@
 <?php
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
+AddEventHandler("iblock", "OnIBlockPropertyBuildList", array("SettingsPropertiyForm", "GetUserTypeDescription"));
+
 /*
  * Пояснения:
  * (*)  - Мы принимаем массив array('VALUE' => , 'DESCRIPTION' => ) и должны его же вернуть. Если поле с описанием - оно будет содержаться в соответствующем ключе.

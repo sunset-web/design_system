@@ -1,5 +1,5 @@
 <?
-
+AddEventHandler("iblock", "OnIBlockPropertyBuildList", array("CIBlockNewPropertySEO", "GetUserTypeDescription"));
 // Класс реализует кастомный тип свойства инфоблока SEO свойство
 
 class CIBlockNewPropertySEO
