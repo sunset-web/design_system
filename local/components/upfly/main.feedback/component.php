@@ -155,7 +155,7 @@ if ($request->getPost("submit") && $arResult["PARAMS_HASH"] === $request->getPos
 		// валидация почты
 		foreach ($arResult['MAIL_FIELDS'] as $code) {
 
-			if (!check_email($request->getPost($code))) {
+			if (!check_email($request->getPost($code)) && mb_strlen($request->getPost($code)) >= 1) {
 
 				$arResult["ERROR_MESSAGE"][$code] = \Bitrix\Main\Localization\Loc::getMessage("MF_EMAIL_NOT_VALID");
 			}
