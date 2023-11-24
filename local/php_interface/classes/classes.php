@@ -31,6 +31,8 @@
 // require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/PropMediaLibIblockProperty.php');
 // // Доп свойство привязка к компаниям из CRM
 // require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/CIBlockPropertyCRM.php');
+// // Доп свойство привязка к элементам с описанием
+// require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/classes/props/ListElWithDescription.php');
 
 // //Load classes
 // \Bitrix\Main\Loader::registerAutoLoadClasses(
