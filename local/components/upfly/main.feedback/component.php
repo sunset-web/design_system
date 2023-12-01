@@ -78,7 +78,7 @@ $arParams["REQUIRED_FIELDS"] = (!empty($arParams["FIELDS"]) ? array_diff($arPara
 $arFilterProps = ['=ACTIVE' => "Y"];
 if ($site !== false)
 	$arFilterProps["=IBLOCK_ID"] = $arParams["IBLOCK_ID"];
-
+\Bitrix\Main\Loader::IncludeModule("iblock");
 $resultQueryProps = \Bitrix\Iblock\PropertyTable::getList([
 	'filter' => $arFilterProps,
 	'cache' => [
