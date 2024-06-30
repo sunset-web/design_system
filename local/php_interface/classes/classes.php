@@ -56,3 +56,4 @@
 //       "FavoritesManager"  => "/local/php_interface/classes/lib/FavoritesManager.php", // класс добавления в избранное
 //    )
 // );
+// 

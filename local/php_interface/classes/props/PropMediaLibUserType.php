@@ -1,5 +1,5 @@
 <?php
-
+AddEventHandler("main", "OnUserTypeBuildList", array("PropMediaLibUserType", "GetUserTypeDescription"));
 \Bitrix\Main\Loader::IncludeModule("fileman");
 CMedialib::Init();
 

@@ -1,4 +1,5 @@
 <?php
+AddEventHandler("iblock", "OnIBlockPropertyBuildList", array("UpflyPriceFilter", "GetUserTypeDescription"));
 /*
  * Пояснения:
  * (*)  - Мы принимаем массив array('VALUE' => , 'DESCRIPTION' => ) и должны его же вернуть. Если поле с описанием - оно будет содержаться в соответствующем ключе.

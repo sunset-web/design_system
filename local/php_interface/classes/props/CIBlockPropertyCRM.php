@@ -1,5 +1,5 @@
 <?php
-
+AddEventHandler("iblock", "OnIBlockPropertyBuildList", array("CIBlockPropertyCRM", "GetUserTypeDescription"));
 class CIBlockPropertyCRM
 {
 

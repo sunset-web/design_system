@@ -1,5 +1,5 @@
 <?php
-
+AddEventHandler("iblock", "OnIBlockPropertyBuildList", array("PropMediaLibIblockProperty", "GetUserTypeDescription"));
 \Bitrix\Main\Loader::IncludeModule("fileman");
 CMedialib::Init();
 
